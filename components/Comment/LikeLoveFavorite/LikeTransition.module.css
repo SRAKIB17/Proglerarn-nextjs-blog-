@@ -1,0 +1,24 @@
+.shareOption {
+    transition: 0.2s;
+    animation-timing-function: ease;
+    animation-name: opacity;
+    animation-duration: 500ms;
+}
+
+@keyframes opacity {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.showLikeUnlikeUser{
+    height: 0px;
+    transition: 0.2s;
+}
+.likeUnlikeUserList::-webkit-scrollbar{
+    display: none;
+}

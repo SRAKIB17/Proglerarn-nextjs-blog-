@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<style>
+    #scrollingDiv {
+        width: 400px;
+    }
+
+    #scrollingDiv::-webkit-scrollbar {
+        display: none;
+    }
+
+    div {
+        width: 300px;
+        border: solid red 3px;
+    }
+
+    /* div {
+        background-color: rgb(255, 0, 0);
+        color: white;
+        border: none;
+        outline: none;
+        border-radius: 40px;
+        width: 300px;
+        height: 30px;
+    } */
+</style>
+
+<body>
+  
+
+    <h2>My First Web Page</h2>
+    <p>My first paragraph.</p>
+    <div className='flex ' style="display: flex;" id='scrollingDiv' onmousedown="autoShow(event)"
+        onmousemove='mouseMove(event)' data-ms="10" data-scrolling="5345">
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat consequuntur numquam optio velit nemo
+            itaque corporis ipsum molestiae aliquid rerum? Labore inventore minus fugiat animi voluptate dolores neque
+            quae molestias?
+        </div>
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat consequuntur numquam optio velit nemo
+            itaque corporis ipsum molestiae aliquid rerum? Labore inventore minus fugiat animi voluptate dolores neque
+            quae molestias?
+        </div>
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat consequuntur numquam optio velit nemo
+            itaque corporis ipsum molestiae aliquid rerum? Labore inventore minus fugiat animi voluptate dolores neque
+            quae molestias?
+        </div>
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat consequuntur numquam optio velit nemo
+            itaque corporis ipsum molestiae aliquid rerum? Labore inventore minus fugiat animi voluptate dolores neque
+            quae molestias?
+        </div>
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat consequuntur numquam optio velit nemo
+            itaque corporis ipsum molestiae aliquid rerum? Labore inventore minus fugiat animi voluptate dolores neque
+            quae molestias?
+        </div>
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat consequuntur numquam optio velit nemo
+            itaque corporis ipsum molestiae aliquid rerum? Labore inventore minus fugiat animi voluptate dolores neque
+            quae molestias?
+        </div>
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat consequuntur numquam optio velit nemo
+            itaque corporis ipsum molestiae aliquid rerum? Labore inventore minus fugiat animi voluptate dolores neque
+            quae molestias?
+        </div>
+    </div>
+    <!-- <script src="https://bloger-nextjs-auto-db-file-create-ll9vdpmwl-srakib17.vercel.app/api/js">
+        
+
+    </script> -->
+    <script>
+
+        let isScrolling = false;
+        let x = 0;
+        let y = 0;
+        let count = 0
+        const autoShow = (e) => {
+            isScrolling = true;
+        }
+        const mouseMove = (e) => {
+            if (isScrolling) {
+                const getId = document.getElementById('scrollingDiv')
+                x = e.pageX;
+                y = e.pageY
+                getId.scrollTo(getId.scrollLeft - e.movementX, 0)
+                count = getId.scrollLeft - e.movementX
+
+            }
+        }
+
+
+        let end = false;
+        const getId = document.getElementById('scrollingDiv');
+        getId.style.display = 'flex';
+        getId.style.overflow = 'auto';
+        getId.style.height = 'auto'
+        getId.style.padding = '3px'
+        getId.style.gap = '5px'
+        setInterval(() => {
+            const getTotalWidth = (getId.scrollWidth - getId.clientWidth + 10)
+            if (getTotalWidth <= count && !end) {
+                end = true
+                count = count - 10
+            }
+
+            else if (getTotalWidth >= count && end) {
+                count--
+                if (getId.scrollLeft == 0) {
+                    end = false
+                }
+            }
+
+
+            else if (getTotalWidth >= count && !end) {
+                count++
+                end = false;
+            }
+            getId.scrollTo(count, 0)
+
+        }, getId.hasAttribute('data-ms') ? getId.getAttribute('data-ms') : 10)
+        document.documentElement.onmouseup = (e) => {
+            isScrolling = false
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+.textareaForm {
+    /* background-color: red; */
+}
+
+
+.separateTextareaMobile {
+    width: 100% !important;
+    height: 4px !important;
+}
+
+.liveView {
+    /* background-color: red; */
+}
+
+.liveOffTextForm {
+    width: 100%;
+}
+
+.liveOff {
+    display: none;
+}
+
+@media (max-width: 640px) {
+    .textareaForm {
+        width: 100% !important;
+    }
+
+    .liveView {
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+
+@media only screen and (max-width:550px) {
+    .PostTextArea {
+        flex-direction: column;
+    }
+
+    .formAndLiveSeparate {
+        width: 100% !important;
+        height: 5px;
+    }
+
+    .postFormSection {
+        width: 100% !important;
+    }
+
+    .LiveView {
+        width: 100% !important;
+    }
+
+    .rotateSvg {
+        display: none !important;
+    }
+}
+
+.livePreviewScrollBarHide {
+    overflow-wrap: break-word;
+    width: calc(100% + 20px) !important;
+    margin-right: 20px;
+    display: block;
+}
+.livePreviewScrollBarHide::-webkit-scrollbar{
+    display: none;
+}

@@ -1,0 +1,212 @@
+/**
+ * User Profile section  === Ok without story api
+ * Path: Story = 
+ * Path: videos= 
+ * Path: Profile
+ * Path: Login:
+ *      1. signup
+ *      2. login
+ *      3. reset password
+ * 
+ * Path: Forum
+ * 
+ */
+
+
+/**
+ * Category:
+ *      ┌○ Category.js > FOR CATEGORY SECTION
+ *      ├○ Category.module.css > Category style sheet
+ * 
+ * Comment:
+ *      ┌○ /EmojiGif/
+ *      ├○      ┌○ /Emoji/ > Emoji Handle 
+ *      ├○      ├○ /Gif/  > Gif Handle
+ *      ├○    
+ *      ┌○ /LikeLoveFavorite/
+ *      ├○      ┌○ /LikeLoveFavorite.js > LikeUnlike Handle
+ *      ├○      ├○ /LikeTransition.module.css > style sheet
+ *      ├○      ├○ /LikeUserList.js > like user list who like this post
+ *      ├○      ├○ /ShareOption.js > share post option
+ *      ├○      └○
+ *      ├○ /Comment_textarea.js > Comment Form
+ *      ├○ /Comment.module.css > style sheet
+ *      ├○ /CommentList.js > Comment list 
+ *      ├○ /MoreCommentReply.js > For reply 
+ *               
+ * Header:
+ *      ┌○ /CommonWindowResizeHeaderComponent.js > window resize , here common window event for header and other component
+ *      ├○ /ContextMenu.js > Mouse right key click and show context menu 
+ *      ├○ /DownloadApk.js > Auto show for Download Apk
+ *      ├○ /DownloadApk.module.css
+ *      ├○ /Header.js > Header Main component
+ *      ├○ /ProfilePicture.js >Header right side profile picture show and open menu
+ *      ├○ /SearchForm.js > search Form for user can search anything
+ *      ├○ /SideLeftBar.js > for laptop or medium device show and other device hide and here have some option
+ *      ├○ /
+ * 
+ * Help:
+ *      ┌○ /Docs.js > for html and tags shortcut emmet
+ *      ├○ /Help.module.css
+ * 
+ * 
+ * 
+ * hooks:
+ *      ┌○ /api/
+ *      ├○      ┌○ /social/
+ *      ├○      ├○      ┌○ /post.js
+ *      ├○      ├○      ├○ /login_user_without_post_body.js
+ *      ├○      ├○      ├○ /
+ *      ├○      ├○ /verifyUser/
+ *      ├○      ├○      ┌○ /loginCheckUser.js
+ *      ├○      ├○      ├○ 
+ *      ├○      ├○
+ *      ├○      └○
+ *      ├○ /checkUser/
+ *      ├○      ┌○ /privatePageCheckUser.js
+ *      ├○      ├○ /useAdminCheck.js
+ *      ├○      ├○ /useUserCheck.js
+ *      ├○      ├○ /
+ *      ├○      └○
+ *      ├○ /hooks/
+ *      ├○      ┌○ /private_access_token_client.js
+ *      ├○      ├○ /useFindClassAttr.js
+ *      ├○      ├○ /useHtmlAttribute.js
+ *      ├○      ├○ /useHtmlTags.js
+ *      ├○      ├○ /useShortcut.js
+ *      ├○      └○
+ *      ├○ /Uploader/
+ *      ├○      ┌○ /useUploadImage.js
+ *      ├○      ├○ /useUploadProfileCoverPhoto.js
+ *      ├○      ├○ /useUploadCode.js
+ *      ├○      └○
+ *      ├○ /TextArea.js
+ *      ├○ /TextArea.module.css
+ *      ├○ /autoJwtTokenGenerateForUserOrGuest.js 
+ *      
+ * 
+ * Home:
+ *      ┌○ /Home.js
+ * 
+ * Login: 
+ *      ┌○ /GuestCommentLikeLogin.js
+ *      ├○ /Login.js
+ *      ├○ /LoginAutoShow.js
+ *      ├○ /LoginFormSide.js
+ * 
+ * 
+ *  * Post-NewFeed:
+ *      ┌○ /DeletePost/
+ *      ├○      ┌○ /DeletePost.js
+ *      ├○      ├○     
+ *      ├○ /EditPostByUserAndAdmin
+ *      ├○      ┌○ /EditDeleteComponentMenu.js
+ *      ├○      ├○ /EditPostForm.TextArea.js
+ *      ├○      ├○ /TextAreaEdit.js
+ *      ├○      ├○
+ *      ├○      └○
+ *      ├○ /LeftSideLg.js   
+ *      ├○ /Post.js   
+ *      ├○ /PostMap.js   
+ *      ├○ /PostMap.module.css
+ *      ├○ /RightSideLg.js
+ *      ├○ /SinglePostView.js
+ *      ├○      
+ * 
+ * profile:
+ *      ┌○ /NewPost/
+ *      ├○      ┌○ /ImageUpload.js
+ *      ├○      ├○ /NewPost.js    
+ *      ├○      ├○ /NewPost.module.css    
+ *      ├○      ├○ /QuickPost.js    
+ *      ├○      ├○     
+ *      ├○ /ProfileEdit
+ *      ├○      ┌○ /ProfileEdit.js
+ *      ├○      ├○ /EditPostForm.TextArea.js
+ *      ├○      ├○ /TextAreaEdit.js
+ *      ├○      ├○
+ *      ├○      └○
+ *      ├○ /About.js   
+ *      ├○ /Profile.js  
+ *      ├○ /UploadProfilePicture.js   
+ *      ├○      
+ * 
+ * 
+ *  PublicProfile:
+ *      ┌○ /PublicProfile.js
+ *      ├○ /about.js
+ * 
+ * 
+ *  Setting:
+ *      ┌○ /CommonSetting.js
+ *      ┌○ /Setting.js
+ *      ├○    
+ * 
+ * 
+ *  SupportInbox:
+ *      ┌○ /Admin.module.css
+ *      ├○  /AdminSupportInbox.js
+ *      ├○  /MessageBody.js
+ *      ├○  /SupportInbox.js
+ *      ├○  /SupportInbox.module.css
+ *      ├○     
+ * 
+ * 
+ * 
+ * 
+ */
+
+
+ *  Pages:
+ *      ┌○ /admin/
+ *      ├○      ┌○ /index.js > Header, PostMap, LoadingFlowCircle [for admin announcement] => ok
+ *      ├○      ├○
+ *      ├○  /api/
+ *      ├○      ┌○
+ *      ├○      ├○
+ *      ├○  /forum/
+ *      ├○      ┌○ index.js > updating
+ *      ├○  
+ *      ├○  /helps/
+ *      ├○      ┌○ /index.js > Header, Docs => updating
+ *      ├○  
+ *      ├○  /login/
+ *      ├○      ┌○ /index.js > [Login >LoadingFlowCircle] > Refresh doesn't work
+ *      ├○      
+ *      ├○  /print/
+ *      ├○      ┌○ /[id].js => updating(template randomly)
+ *      ├○     
+ *      ├○  /profile/ =>done
+ *      ├○      ┌○ /[user_id].js > Header, PublicProfile [for public profile]
+ *      ├○      ├○  /index.js > Header, [Profile > ProfileEdit, NewPost, UpdateProfilePicture] [for user profile]
+ *      ├○ 
+ *      ├○  /service/
+ *      ├○      ┌○ /[...service].js
+ *      ├○      ├○  /index.js 
+ *      ├○ 
+ *      ├○  /setting/
+ *      ├○      ┌○ /index.js > Header, [setting> CommonSetting]
+ *      ├○      ├○  
+ *      ├○ 
+ *      ├○  /story/
+ *      ├○      ┌○ /[post_id].js > Header, PostMap, RightSideLg (for specific post)
+ *      ├○      ├○  /index.js > Header, PostMap, LeftSideLg, LoadingFlowCircle, RightSideLg 
+ *      ├○ 
+ *      ├○  /videos/
+ *      ├○      ┌○ /index.js > Header, PostMap, LeftSideLg, LoadingFlowCircle, RightSideLg 
+ *      ├○      ├○  
+ *      ├○ 
+ *      ├○  /helps/
+ *      ├○  /helps/
+ *      ├○  /helps/
+ *      ├○  /helps/
+ *      ├○  /helps/
+ *      ├○  /helps/
+ *      ├○  /helps/
+ *      ├○  /AdminSupportInbox.js
+ *      ├○  /MessageBody.js
+ *      ├○  /SupportInbox.js
+ *      ├○  /SupportInbox.module.css
+ *      ├○     
+ * 
+ * 

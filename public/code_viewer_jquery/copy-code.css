@@ -1,0 +1,33 @@
+.copyCodeButton {
+    border: 1px solid #dbdbdb;
+    border-radius: .375em;
+    box-shadow: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    padding: calc(.5em - 1px) 1em;
+    text-align: center;
+    touch-action: manipulation;
+    margin: 3px;
+    background-color: #0080ff;
+    color: white;
+    font-size: 12px;
+
+}
+
+.copyCodeButton:active {
+    background-color: #3096fc;
+    border-color: #4a4a4a;
+    outline: 1px #F90143 solid;
+}
+
+.copyCodeButton:focus {
+    border-color: #485fc7;
+}
+
+.copyCodeButton:hover {
+    border-color: #b5b5b5;
+}
+
+.copyCodeButton:focus:not(:active) {
+    box-shadow: rgba(72, 95, 199, .25) 0 0 0 .125em;
+}

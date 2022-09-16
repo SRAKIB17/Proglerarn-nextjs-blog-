@@ -1,0 +1,17 @@
+.postMap {
+  transition: 0.2s;
+  height: fit-content;
+}
+
+.EditPost {
+  transition: 0.2s;
+  left: 200px;
+}
+
+.iframeAutoHightTransition {
+  transition: 0.4s;
+  height: 0px;
+}
+.iframeAutoHightTransition *{
+  color: white !important;
+}

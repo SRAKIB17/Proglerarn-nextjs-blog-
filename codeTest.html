@@ -1,0 +1,93 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        :root {
+            --bg-color: rgb(27, 27, 27);
+            /* --bg-color: rgb(65 65 65); */
+            --copyBtnBg: #0D376D;
+        }
+
+        .codeParent {
+            padding: 4px 4px;
+        }
+
+        .codePreview {}
+
+        .copyBtn {
+            color: white;
+            border-radius: 5px;
+            margin-bottom: 4px;
+            background-color: var(--copyBtnBg);
+        }
+
+        .textCode {
+            min-height: 200px;
+            resize: vertical !important;
+            border-radius: 5px;
+            border: 2px solid #00DBDF;
+            width: -moz-available;
+            width: -webkit-fill-available;;
+        }
+
+        .textCode::selection {
+            font-weight: 800;
+            background-color: #00DBDF;
+            color: white;
+        }
+
+        .textCode:focus {
+            outline: 2px solid var(--copyBtnBg);
+        }
+
+        .textCode::-webkit-scrollbar {
+            width: 4px;
+            resize: both;
+        }
+    </style>
+</head>
+
+<body>
+
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, rerum impedit. Pariatur nihil, officia quod
+    excepturi exercitationem eius odio commodi tenetur ipsum aspernatur perspiciatis temporibus accusamus animi
+    necessitatibus illum voluptatum?
+    <code className='' style=""> fslf
+        sflsfj
+        fsdlf
+        const codeDiv = "<div class='codeParent'><button onclick='copyCodeHandle()' class='copyBtn'>Copy</button><div class='codePreview'><textarea class='textCode' style='line-height: 25px;white-space: pre-wrap;' readonly>" + code.innerHTML + "</textarea></div></div>"
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ipsum corporis laborum repudiandae delectus, velit adipisci deserunt fugit architecto quas ea quos perspiciatis nulla nemo officiis, possimus voluptates, fugiat cupiditate!
+    </code>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit odio ipsum beatae eveniet quasi, iure natus
+    fuga incidunt! Labore impedit temporibus ullam. Ad alias explicabo, repellat temporibus debitis animi quod.
+    <!-- </div> -->
+    <script>
+        const codes = document.getElementsByTagName('code');
+        for (const code of codes) {
+            code.style.width = '100%';
+            const div = document.createElement('div');
+            const codeDiv = "<div class='codeParent'><button onclick='copyCodeHandle()' class='copyBtn'>Copy</button><div class='codePreview'><textarea class='textCode' style='white-space: pre;' readonly>" + code.innerHTML + "</textarea></div></div>"
+            div.innerHTML = codeDiv;
+            code.textContent = '';
+            code.appendChild(div);
+        }
+        const copyCodeHandle = () => {
+            const getCode = event.target.parentElement.querySelector('textarea')
+            getCode.select()
+            document.execCommand('copy')
+            const copyMsg = event.target;
+            copyMsg.innerText = 'Copied'
+            setTimeout(() => {
+                copyMsg.innerText = 'Copy'
+            }, 500);
+        }
+
+    </script>
+</body>
+
+</html>

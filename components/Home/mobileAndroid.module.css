@@ -1,0 +1,74 @@
+.mobile {
+    border: 20px solid rgb(0, 0, 0);
+    /* border-top: 10px solid rgb(0, 0, 0);
+    border-bottom: 8px solid rgb(0, 0, 0); */
+    position: relative;
+    border-radius: 20px;
+    height: 600px;
+    max-width: 400px;
+    width: 100%;
+}
+.mobile input{
+    height: 32px;
+    padding: 5px 10px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid grey;
+}
+.mobile input:focus{
+    outline: 1px solid rgb(0, 255, 0);
+}
+.speaker {
+    height: 30px;
+    width: 100%;
+    top: -3px;
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.apk {
+    height: 30px;
+    width: 20px;
+    margin: auto;
+    text-align: right;
+    top: -3px;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    z-index: 22;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.speaker div {
+    color: rgb(144, 144, 144);
+}
+
+.refresh {
+    position: sticky;
+    bottom: -3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+
+}
+
+.refresh div {
+    height: 35px;
+    width: 100%;
+    padding-top: 4px;
+    background-color: rgb(0, 0, 0);
+}
+
+.refresh button {
+    z-index: 10;
+    background-color: rgb(54, 54, 54);
+    padding: 5px;
+    border-radius: 50%;
+}
